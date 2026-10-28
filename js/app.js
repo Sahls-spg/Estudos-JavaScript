@@ -37,26 +37,26 @@ console.log(resultadoCorrida)
 
 // -- Funções --
 
-function soma(primeiroNumero, segundoNumero)
+function soma(primeiroNumero, segundoNumero) 
 {
     console.log(primeiroNumero + segundoNumero)
 }
 
 soma(100, 1200)
 
-function boasVindas(nome)
+function boasVindas(nome) 
 {
-  alert(nome + ', seja bem-vindo(a) !')
+    alert(nome + ', seja bem-vindo(a) !')
 }
 
 boasVindas('Sara')
 
-function soma(n1, n2)
+function soma(n1, n2) 
 {
     return n1 + n2
 }
 
-var resultado = soma(12,12)
+var resultado = soma(12, 12)
 console.log(resultado)
 
 // -- Controle de fluxos --
@@ -87,17 +87,17 @@ console.log(resultado)
 
 var saldo = 1000
 
-function saque(valor)
+function saque(valor) 
 {
-    if(valor > saldo)
+    if (valor > saldo) 
     {
-        console.log('O valor do saque é superior ao saldo') 
+        console.log('O valor do saque é superior ao saldo')
     }
-    else if(valor > 5.000)
+    else if (valor > 5.000) 
     {
         console.log('O valor do saque ultrapassa o limite de saque diário')
     }
-    else
+    else 
     {
         saldo = saldo - valor
     }
@@ -106,4 +106,44 @@ function saque(valor)
 saque(500)
 console.log(saldo)
 
+// -- Arrays --
 
+var gaveteiro = ['Meias', 'Gravatas', 'Documentos', 'Salgadinhos']
+
+console.log(gaveteiro[0])
+
+var personagens = ['Mestre Yoda', 'Luke Skywalker', 'Princesa Leia', 'Darth Vader']
+
+personagens.push('C3PO') // Adicione esse personagem no array
+personagens.pop() // Remove o último item do array
+
+personagens = personagens.filter(function (p) 
+{
+    return p !== 'Darth Vader'
+})
+
+personagens = personagens.filter(function (p) 
+{
+    return p === 'Princesa Leia'
+})
+
+console.log(personagens)
+
+// -- Laços de repetição --
+
+var personagens = ['Mestre Yoda', 'Luke Skywalker', 'Princesa Leia', 'Darth Vader', 'R2D2']
+
+personagens.forEach(function (p) 
+{
+    console.log(p)
+})
+
+for (var indice in personagens) 
+{
+    console.log(personagens[indice])
+}
+
+for (var indice = 0; indice <= 4; indice++) 
+{
+    console.log(personagens[indice])
+}
